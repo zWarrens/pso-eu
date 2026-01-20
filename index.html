@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSO Challenge</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSO Europe – Stage</title>
 
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: #0b1c2d; /* arka plan koyu mavi */
-        }
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #081a2b;
+}
 
-        .iframe-wrapper {
-            width: 100%;
-            height: 650px;      /* ⬅ görünür alan */
-            overflow: hidden;   /* ⬅ kırpma */
-            position: relative;
-        }
+/* KIRPMA ALANI */
+.iframe-wrapper {
+    width: 100%;
+    height: 720px;          /* ⬅ SADECE İÇERİK KADAR */
+    overflow: hidden;       /* ⬅ TAŞANI GİZLE */
+    position: relative;
+    background: #081a2b;    /* alttaki koyu alanla aynı */
+}
 
-        .iframe-wrapper iframe {
-            width: 125%;        /* ⬅ sağ-sol kırpma */
-            height: 125%;       /* ⬅ üst-alt kırpma */
-            border: none;
-            position: absolute;
-            top: -80px;         /* ⬅ üstten kırp */
-            left: -100px;       /* ⬅ soldan kırp */
-        }
+/* IFRAME ZORLA BÜYÜTÜLÜR */
+.iframe-wrapper iframe {
+    position: absolute;
+    border: none;
 
-        /* Mobil uyum */
-        @media (max-width: 768px) {
-            .iframe-wrapper {
-                height: 550px;
-            }
+    width: 160%;            /* ⬅ YANLAR GİTSİN */
+    height: 180%;           /* ⬅ ALT BOŞLUK GİTSİN */
 
-            .iframe-wrapper iframe {
-                width: 140%;
-                height: 140%;
-                top: -120px;
-                left: -120px;
-            }
-        }
-    </style>
+    top: -260px;            /* ⬅ ÜST HERO + HEADER SİL */
+    left: -220px;           /* ⬅ SOL BOŞLUK SİL */
+}
+
+/* MOBİL */
+@media (max-width: 768px) {
+    .iframe-wrapper {
+        height: 650px;
+    }
+
+    .iframe-wrapper iframe {
+        width: 200%;
+        height: 220%;
+        top: -320px;
+        left: -300px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="iframe-wrapper">
-        <iframe
-            src="https://challenge.place/c/696e122b21c11667190280a5/stage/696e132d5af6640949a63e1b"
-            allowfullscreen>
-        </iframe>
-    </div>
+<div class="iframe-wrapper">
+    <iframe
+        src="https://challenge.place/c/696e122b21c11667190280a5/stage/696e132d5af6640949a63e1b"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</div>
 
 </body>
 </html>
