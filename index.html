@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>PSO Competitors</title>
-
-<style>
-  body {
-    margin: 0;
-    background: white;
-    overflow: hidden;
-  }
-
-  .wrapper {
-    width: 100%;
-    height: 1000px;          /* GÖRÜNEN ALAN */
-    overflow: hidden;
-  }
-
-  iframe {
-    width: 100%;
-    height: 1600px;         /* GERÇEK SAYFA BOYU */
-    border: none;
-    transform: translateY(-420px); /* ÜST HEADER + MENÜYÜ GİZLER */
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSO Challenge Görüntüleme</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100vh; /* Ekranı tamamen kaplar */
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="wrapper">
-  <iframe src="https://challenge.place/c/696e122b21c11667190280a5/competitors?v=2"></iframe>
-</div>
+<iframe 
+    src="https://challenge.place/c/696e122b21c11667190280a5/stage/696e132d5af6640949a63e1b" 
+    allowfullscreen
+></iframe>
 
 </body>
 </html>
