@@ -3,27 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSO Challenge Görüntüleme</title>
+    <title>PSO Challenge</title>
+
     <style>
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
+            background: #0b1c2d; /* arka plan koyu mavi */
         }
-        iframe {
-            border: none;
+
+        .iframe-wrapper {
             width: 100%;
-            height: 100vh; /* Ekranı tamamen kaplar */
+            height: 650px;      /* ⬅ görünür alan */
+            overflow: hidden;   /* ⬅ kırpma */
+            position: relative;
+        }
+
+        .iframe-wrapper iframe {
+            width: 125%;        /* ⬅ sağ-sol kırpma */
+            height: 125%;       /* ⬅ üst-alt kırpma */
+            border: none;
+            position: absolute;
+            top: -80px;         /* ⬅ üstten kırp */
+            left: -100px;       /* ⬅ soldan kırp */
+        }
+
+        /* Mobil uyum */
+        @media (max-width: 768px) {
+            .iframe-wrapper {
+                height: 550px;
+            }
+
+            .iframe-wrapper iframe {
+                width: 140%;
+                height: 140%;
+                top: -120px;
+                left: -120px;
+            }
         }
     </style>
 </head>
 <body>
 
-<iframe 
-    src="https://challenge.place/c/696e122b21c11667190280a5/stage/696e132d5af6640949a63e1b" 
-    allowfullscreen
-></iframe>
+    <div class="iframe-wrapper">
+        <iframe
+            src="https://challenge.place/c/696e122b21c11667190280a5/stage/696e132d5af6640949a63e1b"
+            allowfullscreen>
+        </iframe>
+    </div>
 
 </body>
 </html>
